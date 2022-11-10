@@ -65,3 +65,20 @@ create table partida (
 idPartida int primary key auto_increment,
 dataHora datetime
 );
+
+create table arbitragem_da_partida (
+idArbitragem_da_partida int auto_increment,
+fkArbitragem int,
+foreign key (fkArbitragem) references arbitragem_da_partida (idArbitragem_da_partida),
+fkPartida int,
+foreign key (fkPartida) references arbitragem_da_partida (idArbitragem_da_partida),
+primary key (idArbitragem_da_partida, fkArbitragem, fkPartida)
+);
+
+create table Arbitragem (
+idArbitragem int primary key auto_increment,
+nomeArbtitro varchar(45),
+nomeBandeirinha varchar(45),
+fkArbitro int,
+foreign key (fkArbitro) references Arbitragem (idArbitragem)
+);
