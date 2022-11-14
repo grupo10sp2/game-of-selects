@@ -11,7 +11,7 @@ USE copaDoMundo;
 CREATE TABLE selecao (
     idSelecao INT PRIMARY KEY AUTO_INCREMENT,
     pais VARCHAR(45),
-    tecnicno VARCHAR(45)
+    tecnico VARCHAR(45)
 );
 
 -- Criando a tabela Jogador
@@ -99,3 +99,39 @@ CREATE TABLE arbitragemJogo (
     FOREIGN KEY (fkArbitragem) REFERENCES arbitragem(idArbitragem),
     PRIMARY KEY (fkPartida, fkArbitragem)
 );
+
+ -- Inserindo valores da entidade Selecao
+ 
+ insert into selecao (pais, tecnico) values 
+("Alemanha", "Hansi Flick"),
+("Arábia Saudita", "Hervé Renard"),
+("Argentina", "Lionel Scaloni"),
+("Austrália", "Graham Arnold"),
+("Bélgica", "Roberto Martínez"),
+("Brasil", "Tite"),
+("Camarões", "Rigobert Song"),
+("Canadá", "John Herdman"),
+("Catar", "Félix Sanchez"),
+("Coreia do Sul", "Paulo Bento"),
+("Costa Rica", "Luis Fernando Suárez"),
+("Croácia", "Zlatko Dalić"),
+("Dinamarca", "Kasper Hjulmand"),
+("Equador", "Gustavo Alfaro"),
+("Espanha", "Luis Enrique"),
+("Estados Unidos", "Gregg Berhalter"),
+("França", "Didier Deschamps"),
+("Gana", "Otto Addo"),
+("Holanda", "Louis Van Gaal"),
+("Inglaterra", "Gareth Southgate"),
+("Irã", "Dragan Skočić"),
+("Japão", "Hajime Moriyasu"),
+("Marrocos", "Walid Regragui"),
+("México", "Gerardo Tata Martino"),
+("País de Gales", "Rob Page"),
+("Polônia", "Czesław Michniewicz"),
+("Portugal", "Fernando Santos"),
+("Senegal", "Aliou Cissé"),
+("Sérvia", "Dragan Stojković"),
+("Suíça", "Murat Yakin"),
+("Tunísia", "Jalel Kadri"),
+("Uruguai", "Diego Alonso");
