@@ -14,8 +14,6 @@ CREATE TABLE selecao (
     tecnico VARCHAR(45)
 );
 
-select * from selecao;
-
 -- Criando a tabela Jogador
 
 CREATE TABLE jogador (
@@ -151,8 +149,6 @@ CREATE TABLE arbitragemJogo (
 ("Suíça", "Murat Yakin"),
 ("Tunísia", "Jalel Kadri"),
 ("Uruguai", "Diego Alonso");
-
-select * from selecao;
 
 -- Inserindo valores da entidade jogador
 
@@ -582,8 +578,6 @@ insert into estadio (nome, cidade) values
 ('Al Thumama','Doha'),
 ('Al Janoub','Al Wakrah');
 
-select * from estadio;
-
 insert into arbitragem (nomeArbitroOficial, nomeBandeirinha1, nomeBandeirinha2) values
 ("Abdulrahman Al-Jassim","Taleb Al Marri","Saoud Al-Maqaleh"),
 ("Chris Beath","Anton Shchetinin","Ashley Beecham"),
@@ -618,8 +612,6 @@ insert into arbitragem (nomeArbitroOficial, nomeBandeirinha1, nomeBandeirinha2) 
 ("Anthony Taylor","Gary Beswick","Adam Nunn"),
 ("Clément Turpin","Nicolas Danos","Cyril Gringore"),
 ("Slavko Vinčić","Tomaž Klančnik","Andraž Kovačič");
-
-select * from arbitragem;
 
 insert into classificacao (fkSelecao, pontos, qtdJogos, qtdVitorias, qtdDerrotas, qtdEmpates, golsPros, golsContras, saldoGols, grupo) values
 (1, 9, 3, 3, 0, 0, 6, 2, 4, "E"),
