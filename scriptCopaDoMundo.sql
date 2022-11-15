@@ -619,6 +619,8 @@ insert into arbitragem (nomeArbitroOficial, nomeBandeirinha1, nomeBandeirinha2) 
 ("Clément Turpin","Nicolas Danos","Cyril Gringore"),
 ("Slavko Vinčić","Tomaž Klančnik","Andraž Kovačič");
 
+select * from arbitragem;
+
 insert into classificacao (fkSelecao, pontos, qtdJogos, qtdVitorias, qtdDerrotas, qtdEmpates, golsPros, golsContras, saldoGols, grupo) values
 (1, 9, 3, 3, 0, 0, 6, 2, 4, "E"),
 (2, 0, 3, 0, 3, 0, 2, 5, -3, "C"),
@@ -803,16 +805,52 @@ insert into estadioJogo (fkPartida, fkEstadio) values
 (47, 7),
 (48, 8);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+insert into arbitragemJogo (fkPartida, fkArbitragem) values
+(1,  1),
+(2,  2),
+(3,  3),
+(4,  4),
+(5,  5),
+(6,  6),
+(7,  7),
+(8,  8),
+(9,  9),
+(10, 10),
+(11, 11),
+(12, 12),
+(13, 13),
+(14, 14),
+(15, 15),
+(16, 16),
+(17, 17),
+(18, 18),
+(19, 19),
+(20, 20),
+(21, 21),
+(22, 22),
+(23, 23),
+(24, 24),
+(25, 25),
+(26, 26),
+(27, 27),
+(28, 28),
+(29, 29),
+(30, 30),
+(31, 31),
+(32, 32),
+(33, 33),
+(34, 1),
+(35, 2),
+(36, 3),
+(37, 4),
+(38, 5),
+(39, 6),
+(40, 7),
+(41, 8),
+(42, 9),
+(43, 10),
+(44, 11),
+(45, 12),
+(46, 13),
+(47, 14),
+(48, 15);
