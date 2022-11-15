@@ -43,6 +43,9 @@ CREATE TABLE classificacao (
     grupo VARCHAR(45)
 );
 
+-- add o atributo pontos na entidade classificacao
+alter table classificacao add column pontos int;
+
 -- Criando a tabela Partida
 
 CREATE TABLE partida (
@@ -600,6 +603,42 @@ insert into arbitragem (nomeArbitroOficial, nomeBandeirinha1, nomeBandeirinha2) 
 ("Anthony Taylor","Gary Beswick","Adam Nunn"),
 ("Clément Turpin","Nicolas Danos","Cyril Gringore"),
 ("Slavko Vinčić","Tomaž Klančnik","Andraž Kovačič");
+
+insert into classificacao (fkSelecao, pontos, qtdJogos, qtdVitorias, qtdDerrotas, qtdEmpates, golsPros, golsContras, saldoGols, grupo) values
+(1, 9, 3, 3, 0, 0, 6, 2, 4, "E"),
+(2, 0, 3, 0, 3, 0, 2, 5, -3, "C"),
+(3, 9, 3, 3, 0, 0, 8, 3, 5, "C"),
+(4, 1, 3, 0, 2, 1, 3, 6, -3, "D"),
+(5, 9, 3, 3, 0, 0, 7, 3, 4, "F"),
+(6, 9, 3, 3, 0, 0, 7, 2, 5, "G"),
+(7, 4, 3, 1, 1, 1, 5, 5, 0, "G"),
+(8, 0, 3, 0, 3, 0, 1, 7, -6, "F"),
+(9, 0, 3, 0, 3, 0, 1, 6, -5, "A"),
+(10, 3, 3, 1, 2, 0, 3, 4, -1, "H"),
+(11, 0, 3, 0, 3, 0, 1, 4, -3, "E"),
+(12, 6, 3, 2, 1, 0, 6, 3, 3, "F"),
+(13, 7, 3, 2, 0, 1, 6, 2, 4, "D"),
+(14, 6, 3, 2, 1, 0, 4, 3, 1, "A"),
+(15, 6, 3, 2, 1, 0, 5, 5, 0, "E"),
+(16, 3, 3, 1, 2, 0, 3, 5, -2, "B"),
+(17, 7, 3, 2, 0, 1, 7, 3, 4, "D"),
+(18, 0, 3, 0, 3, 0, 3, 6, -3, "H"),
+(19, 9, 3, 3, 0, 0, 8, 2, 6, "A"),
+(20, 6, 3, 2, 1, 0, 5, 3, 2, "B"),
+(21, 0, 3, 0, 3, 0, 2, 6, -4, "B"),
+(22, 3, 3, 1, 2, 0, 3, 4, -1, "E"),
+(23, 0, 3, 0, 3, 0, 1, 6, -5, "F"),
+(24, 3, 3, 1, 2, 0, 3, 4, -1, "C"),
+(25, 6, 3, 2, 1, 0, 3, 5, -2, "B"),
+(26, 6, 3, 2, 1, 0, 3, 3, 0, "C"),
+(27, 7, 3, 2, 0, 1, 7, 4, 3, "H"),
+(28, 3, 3, 1, 2, 0, 3, 3, 0, "A"),
+(29, 4, 3, 1, 1, 1, 3, 4, -1, "G"),
+(30, 4, 3, 1, 1, 1, 4, 4, 0, "G"),
+(31, 1, 3, 0, 2, 1, 2, 7, -5, "D"),
+(32, 7, 3, 2, 0, 1, 6, 3, 3, "H");
+
+
 
 
 
