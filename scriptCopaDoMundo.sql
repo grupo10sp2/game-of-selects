@@ -56,6 +56,13 @@ CREATE TABLE partida (
     golsSelecao2 INT
 );
 
+-- alterando tabela partida
+alter table partida drop column golsSelecao1;
+alter table partida drop column golsSelecao2;
+
+-- excluindo o atributo duracao
+alter table partida drop column duracao;
+
 -- Criando a tabela Seleçoes Partida
 
 CREATE TABLE selecoesPartida (
@@ -67,6 +74,10 @@ CREATE TABLE selecoesPartida (
     FOREIGN KEY (fkSelecao2) REFERENCES selecao(idSelecao),
     PRIMARY KEY (fkPartida, fkSelecao1, fkSelecao2)
 );
+
+-- add as colunas na tabela associativa
+alter table selecoesPartida add column golsSelecao1 int;
+alter table selecoesPartida add column golsSelecao2 int;
 
 -- Criando a tabela Estádio
 
@@ -637,6 +648,58 @@ insert into classificacao (fkSelecao, pontos, qtdJogos, qtdVitorias, qtdDerrotas
 (30, 4, 3, 1, 1, 1, 4, 4, 0, "G"),
 (31, 1, 3, 0, 2, 1, 2, 7, -5, "D"),
 (32, 7, 3, 2, 0, 1, 6, 3, 3, "H");
+
+insert into partida (dataHoraInicio) values
+("2022-11-20 13:00:00"),
+("2022-11-21 13:00:00"),
+("2022-11-21 13:00:00"),
+("2022-11-21 16:00:00"),
+("2022-11-22 07:00:00"),
+("2022-11-22 13:00:00"),
+("2022-11-22 14:00:00"),
+("2022-11-22 16:00:00"),
+("2022-11-23 10:00:00"),
+("2022-11-23 13:00:00"),
+("2022-11-23 14:00:00"),
+("2022-11-23 16:00:00"),
+("2022-11-24 07:00:00"),
+("2022-11-24 16:00:00"),
+("2022-11-24 10:00:00"),
+("2022-11-24 17:00:00"),
+("2022-11-25 10:00:00"),
+("2022-11-25 13:00:00"),
+("2022-11-25 07:00:00"),
+("2022-11-25 16:00:00"),
+("2022-11-26 10:00:00"),
+("2022-11-26 12:00:00"),
+("2022-11-26 14:00:00"),
+("2022-11-26 16:00:00"),
+("2022-11-27 07:00:00"),
+("2022-11-27 12:00:00"),
+("2022-11-27 14:00:00"),
+("2022-11-27 16:00:00"),
+("2022-11-28 07:00:00"),
+("2022-11-28 12:00:00"),
+("2022-11-28 14:00:00"),
+("2022-11-28 16:00:00"),
+("2022-11-29 12:00:00"),
+("2022-11-29 12:00:00"),
+("2022-11-29 16:00:00"),
+("2022-11-29 16:00:00"),
+("2022-11-30 16:00:00"),
+("2022-11-30 16:00:00"),
+("2022-11-30 17:00:00"),
+("2022-11-30 17:00:00"),
+("2022-12-01 12:00:00"),
+("2022-12-01 12:00:00"),
+("2022-12-01 16:00:00"),
+("2022-12-01 16:00:00"),
+("2022-12-02 16:00:00"),
+("2022-12-02 16:00:00"),
+("2022-12-02 18:00:00"),
+("2022-12-02 18:00:00");
+
+
 
 
 
